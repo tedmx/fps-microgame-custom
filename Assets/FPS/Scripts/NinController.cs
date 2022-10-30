@@ -38,64 +38,24 @@ public class NinController : MonoBehaviour
         var player = GameObject.Find("Player");
         var direction = (player.transform.position - neckBone.transform.position).normalized;
 
-        var lookAtPlayerQuaternion = Quaternion.LookRotation(direction);
+        var quaternionToPlayer = new Quaternion();
+        quaternionToPlayer.SetLookRotation((player.transform.position - neckBone.transform.position).normalized, Vector3.up);
 
-        var playerPositionYAgnostic = player.transform.position;
-        playerPositionYAgnostic.y = 0;
+        var targetRotation = quaternionToPlayer;
 
-        var thisPositionYAgnostic = transform.position;
-        playerPositionYAgnostic.y = 0;
+        var vectorToPlayerYAgnostic = player.transform.position - transform.position;
+        vectorToPlayerYAgnostic.y = 0;
+        var angleToPlayerYAgnostic = Vector3.Angle(vectorToPlayerYAgnostic, new Vector3(-1, 0, 0));
 
-        var vectorToPlayer = playerPositionYAgnostic - thisPositionYAgnostic;
-
-        // var vectorToPlayer = playerPositionYAgnostic - thisPositionYAgnostic;
-
-        // var targetVector = lookAtPlayerQuaternion;
-        var targetQuaternion = Quaternion.Euler(vectorToPlayer.x, vectorToPlayer.y, vectorToPlayer.z);
-        // var forwardVector = transform.forward;
-        // var adjustedForwardVector = new Vector3(-90, 0, 0);
-        //Debug.Log("adjustedForwardVector");
-        //Debug.Log(adjustedForwardVector);
-
-        var forwardQuaternion = Quaternion.Euler(0, -90, 0);
-
-        var angleToPlayerYAgnostic = Vector3.Angle(vectorToPlayer, forwardQuaternion.eulerAngles);
         var playerIsBehind = angleToPlayerYAgnostic > 100;
-
-        var playerIsTooFarAway = vectorToPlayer.magnitude > 17;
+        var playerIsTooFarAway = vectorToPlayerYAgnostic.magnitude > 17;
 
         if (playerIsBehind || playerIsTooFarAway)
         {
-            targetQuaternion = forwardQuaternion;
+            targetRotation = Quaternion.Euler(0, -90, 0);
         }
 
-        var newRotation = neckBone.transform.rotation;
-        newRotation.SetFromToRotation(neckBone.transform.forward, vectorToPlayer);
-        neckBone.transform.rotation = newRotation;// Quaternion.Euler(vectorToPlayer.x, vectorToPlayer.y, vectorToPlayer.z);
-        // neckBone.transform.rotation = Quaternion.Slerp(targetQuaternion, neckBone.transform.rotation, 0.999f);
-
-        /* var correctedNeckRotationY = neckBone.transform.localEulerAngles.y;
-         var limitDistances = new float[] { 0, 0 };
-         if (correctedNeckRotationY > 45 && correctedNeckRotationY < 315)
-         {
-             limitDistances[0] = Math.Abs(correctedNeckRotationY - 45);
-             limitDistances[1] = Math.Abs(correctedNeckRotationY - 315);
-             if (limitDistances[0] < limitDistances[1])
-             {
-                 correctedNeckRotationY = 45;
-             } else
-             {
-                 correctedNeckRotationY = 315;
-             }
-         }*/
-        //Debug.Log("correctedNeckRotationY");
-        //Debug.Log(correctedNeckRotationY);
-
-
-        // var neckLocalEulerAngles = neckBone.transform.localEulerAngles;
-        //neckLocalEulerAngles.y = correctedNeckRotationY;
-
-        // neckBone.transform.localEulerAngles = neckLocalEulerAngles;
+        neckBone.transform.rotation = Quaternion.Slerp(targetRotation, neckBone.transform.rotation, 0.999f);
 
         var curLeftLegIKPos = GameObject.Find("LegL_IK_Control").transform.position - transform.position;
         var curRightLegIKPos = GameObject.Find("LegR_IK_Control").transform.position - transform.position;
