@@ -87,11 +87,6 @@ namespace Unity.FPS.AI
         Collider[] m_SelfColliders;
         GameFlowManager m_GameFlowManager;
         bool m_WasDamagedThisFrame;
-        float m_LastTimeWeaponSwapped = Mathf.NegativeInfinity;
-        int m_CurrentWeaponIndex;
-        WeaponController m_CurrentWeapon;
-        WeaponController[] m_Weapons;
-        NavigationModule m_NavigationModule;
 
         void Start()
         {

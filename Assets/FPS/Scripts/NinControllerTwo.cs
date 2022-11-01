@@ -2,17 +2,21 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.FPS.AI;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.XR;
 using static UnityEngine.GraphicsBuffer;
 
-public class NinController : MonoBehaviour
+public class NinControllerTwo : MonoBehaviour
 {
     public bool leftFeetMovesBack = false;
     public bool rightFeetMovesBack = false;
     public float forwardMoveSpeed = 0;
 
     public float floorStepImpact = 0;
+
+    public bool navigationIsStopped = false;
 
     Vector3 lastLeftLegIKPos;
     Vector3 lastRightLegIKPos;
@@ -34,14 +38,17 @@ public class NinController : MonoBehaviour
 
         var vectorToPlayerYAgnostic = player.transform.position - transform.position;
         vectorToPlayerYAgnostic.y = 0;
-        var angleToPlayerYAgnostic = Vector3.Angle(vectorToPlayerYAgnostic, new Vector3(-1, 0, 0));
+
+
+        var angleToPlayerYAgnostic = Vector3.Angle(vectorToPlayerYAgnostic, transform.forward);
 
         var playerIsBehind = angleToPlayerYAgnostic > 100;
         var playerIsTooFarAway = vectorToPlayerYAgnostic.magnitude > 17;
 
         if (playerIsBehind || playerIsTooFarAway)
         {
-            targetRotation = Quaternion.Euler(0, -90, 0);
+            targetRotation = new Quaternion();
+            targetRotation.SetLookRotation(transform.forward);
         }
 
         neckBone.transform.rotation = Quaternion.Slerp(targetRotation, neckBone.transform.rotation, 0.999f);
@@ -49,9 +56,6 @@ public class NinController : MonoBehaviour
 
     void UpdateCameraShake()
     {
-
-        Debug.Log("1 2 3");
-
         var player = GameObject.Find("Player");
         var mainCamera = GameObject.Find("Main Camera");
 
@@ -67,19 +71,42 @@ public class NinController : MonoBehaviour
         var curLeftLegIKPos = GameObject.Find("LegL_IK_Control").transform.position - transform.position;
         var curRightLegIKPos = GameObject.Find("LegR_IK_Control").transform.position - transform.position;
 
+        var NavMeshAgent = GetComponent<NavMeshAgent>();
+
+        var animator = GetComponent<Animator>();
+
+        NavMeshAgent.speed = 0;
+
+        Debug.Log("remainingDistance");
+        Debug.Log(NavMeshAgent.remainingDistance);
+
+        animator.SetBool("isWalking", NavMeshAgent.remainingDistance > 5);
+
         if (leftFeetMovesBack)
         {
-            var increment = (lastLeftLegIKPos.x - curLeftLegIKPos.x);
-            transform.position = transform.position + new Vector3(increment, 0, 0);
+            var increment = (lastLeftLegIKPos - curLeftLegIKPos).magnitude;
+            // transform.position = transform.position + transform.forward * increment;
+            var distance = (lastLeftLegIKPos - curLeftLegIKPos).magnitude;
+            NavMeshAgent.speed = distance / Time.deltaTime;
         }
         else if (rightFeetMovesBack)
         {
-            var increment = (lastRightLegIKPos.x - curRightLegIKPos.x);
-            transform.position = transform.position + new Vector3(increment, 0, 0);
+            var increment = (lastRightLegIKPos - curRightLegIKPos).magnitude;
+            // transform.position = transform.position + transform.forward * increment;
+            //NavMeshAgent.speed = increment * 125;
+            var distance = (lastRightLegIKPos - curRightLegIKPos).magnitude;
+            NavMeshAgent.speed = distance / Time.deltaTime;
         }
 
         lastLeftLegIKPos = curLeftLegIKPos;
         lastRightLegIKPos = curRightLegIKPos;
+    }
+    void Navigate()
+    {
+        var NavMeshAgent = GetComponent<NavMeshAgent>();
+        NavMeshAgent.isStopped = navigationIsStopped;
+        var target = GameObject.Find("NinTarget");
+        NavMeshAgent.SetDestination(target.transform.position);
     }
 
     // Update is called once per frame
@@ -91,10 +118,12 @@ public class NinController : MonoBehaviour
 
         UpdateCameraShake();
 
+        Navigate();
+
         var upperBodyBone = GameObject.Find("UpperBody");
 
-        upperBodyBone.transform.rotation = Quaternion.identity;
-        var rotationDegToSet = -90 + (-45) * Mathf.Sin(Time.time / 5);
+        upperBodyBone.transform.rotation = transform.rotation;
+        var rotationDegToSet = 45 * Mathf.Sin(Time.time / 5);
         upperBodyBone.transform.Rotate(0, rotationDegToSet, 0);
 
     }
