@@ -18,12 +18,15 @@ public class NinControllerTwo : MonoBehaviour
 
     public bool navigationIsStopped = false;
 
+    Vector3 previousPosition = new();
+
     Vector3 lastLeftLegIKPos;
     Vector3 lastRightLegIKPos;
 
     // Start is called before the first frame update
     void Start()
     {
+       
     }
 
     void UpdatePlayerTrackingSight()
@@ -71,42 +74,67 @@ public class NinControllerTwo : MonoBehaviour
         var curLeftLegIKPos = GameObject.Find("LegL_IK_Control").transform.position - transform.position;
         var curRightLegIKPos = GameObject.Find("LegR_IK_Control").transform.position - transform.position;
 
-        var NavMeshAgent = GetComponent<NavMeshAgent>();
-
-        var animator = GetComponent<Animator>();
-
-        NavMeshAgent.speed = 0;
-
-        Debug.Log("remainingDistance");
-        Debug.Log(NavMeshAgent.remainingDistance);
-
-        animator.SetBool("isWalking", NavMeshAgent.remainingDistance > 5);
+        /*Debug.Log("speedRotationMultiplier");
+        Debug.Log(speedRotationMultiplier);*/
 
         if (leftFeetMovesBack)
         {
-            var increment = (lastLeftLegIKPos - curLeftLegIKPos).magnitude;
-            // transform.position = transform.position + transform.forward * increment;
             var distance = (lastLeftLegIKPos - curLeftLegIKPos).magnitude;
-            NavMeshAgent.speed = distance / Time.deltaTime;
+            transform.position += transform.forward * distance;
+            // NavMeshAgent.speed = distance / Time.deltaTime * speedRotationMultiplier;
         }
         else if (rightFeetMovesBack)
         {
-            var increment = (lastRightLegIKPos - curRightLegIKPos).magnitude;
-            // transform.position = transform.position + transform.forward * increment;
-            //NavMeshAgent.speed = increment * 125;
             var distance = (lastRightLegIKPos - curRightLegIKPos).magnitude;
-            NavMeshAgent.speed = distance / Time.deltaTime;
+            transform.position += transform.forward * distance;
+            // NavMeshAgent.speed = distance / Time.deltaTime * speedRotationMultiplier;
         }
 
         lastLeftLegIKPos = curLeftLegIKPos;
         lastRightLegIKPos = curRightLegIKPos;
+
+        previousPosition = transform.position;
     }
     void Navigate()
     {
-        var NavMeshAgent = GetComponent<NavMeshAgent>();
-        NavMeshAgent.isStopped = navigationIsStopped;
+        var animator = GetComponent<Animator>();
         var target = GameObject.Find("NinTarget");
-        NavMeshAgent.SetDestination(target.transform.position);
+
+        // Debug.Log("NavMeshAgent.areaMask");
+        /*Debug.Log("angleToCurPosition");
+        Debug.Log(angleToCurPosition);*/
+
+        NavMeshPath testPath = new();
+        NavMesh.CalculatePath(transform.position, target.transform.position, -1, testPath);
+        // Debug.Log(testPath.corners);
+
+        var distanceToTarget = (target.transform.position - transform.position).magnitude;
+        if (testPath.corners.Length < 2 || distanceToTarget < 5)
+        {
+            animator.SetBool("isWalking", false);
+            return;
+        }
+
+        animator.SetBool("isWalking", true);
+        // var vectorToNextPoint = (testPath.corners[1] - transform.position);
+        // var directionToNextPoint = vectorToNextPoint.normalized;
+        // transform.position += directionToNextPoint * 0.05f;
+
+        Quaternion initialRotQuaternion = transform.rotation;
+
+        transform.LookAt(testPath.corners[1]);
+        Quaternion rotQuaternionToNextCorner = transform.rotation;
+
+        transform.rotation = Quaternion.Slerp(rotQuaternionToNextCorner, initialRotQuaternion, 0.995f);
+
+        //var quaternionToNextCorner = new Quaternion();
+        //var vectorToNextCorner = (testPath.corners[1] - transform.position);
+        //var directionToNextPoint = vectorToNextCorner.normalized;
+
+       // transform.ROt(Vector3.Slerp(transform.forward, vectorToNextCorner, 0.999f));
+        // quaternionToNextCorner.SetFromToRotation(transform.forward, directionToNextPoint);
+        // transform.rotation = quaternionToNextCorner; //Quaternion.Lerp(quaternionToNextCorner, transform.rotation, 0.0f);
+
     }
 
     // Update is called once per frame

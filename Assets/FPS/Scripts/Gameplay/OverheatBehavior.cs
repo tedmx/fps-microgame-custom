@@ -76,6 +76,13 @@ namespace Unity.FPS.Gameplay
         {
             // visual smoke shooting out of the gun
             float currentAmmoRatio = m_Weapon.CurrentAmmoRatio;
+            if (
+                m_OverheatMaterialPropertyBlock == null
+                || OverheatGradient == null
+               )
+            {
+                return;
+            }
             if (currentAmmoRatio != m_LastAmmoRatio)
             {
                 m_OverheatMaterialPropertyBlock.SetColor("_EmissionColor",
