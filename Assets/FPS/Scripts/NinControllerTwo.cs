@@ -18,12 +18,14 @@ public class NinControllerTwo : MonoBehaviour
 
     public bool navigationIsStopped = false;
 
+    bool nextCornerIsDefined;
+    Vector3 nextCorner;
+
     Vector3 previousPosition = new();
 
     Vector3 lastLeftLegIKPos;
     Vector3 lastRightLegIKPos;
 
-    // Start is called before the first frame update
     void Start()
     {
        
@@ -74,20 +76,35 @@ public class NinControllerTwo : MonoBehaviour
         var curLeftLegIKPos = GameObject.Find("LegL_IK_Control").transform.position - transform.position;
         var curRightLegIKPos = GameObject.Find("LegR_IK_Control").transform.position - transform.position;
 
-        /*Debug.Log("speedRotationMultiplier");
-        Debug.Log(speedRotationMultiplier);*/
+        var directionVector = transform.forward;
+        if (nextCornerIsDefined)
+        {
+            directionVector = (nextCorner - transform.position).normalized;
+        }
 
         if (leftFeetMovesBack)
         {
             var distance = (lastLeftLegIKPos - curLeftLegIKPos).magnitude;
-            transform.position += transform.forward * distance;
-            // NavMeshAgent.speed = distance / Time.deltaTime * speedRotationMultiplier;
+            transform.position += directionVector * distance;
+
+            NavMeshHit navMeshHit;
+            NavMesh.SamplePosition(transform.position, out navMeshHit, 10.0f, -1);
+            if (navMeshHit.hit)
+            {
+                transform.position = navMeshHit.position;
+            }
         }
         else if (rightFeetMovesBack)
         {
             var distance = (lastRightLegIKPos - curRightLegIKPos).magnitude;
-            transform.position += transform.forward * distance;
-            // NavMeshAgent.speed = distance / Time.deltaTime * speedRotationMultiplier;
+            transform.position += directionVector * distance;
+
+            NavMeshHit navMeshHit;
+            NavMesh.SamplePosition(transform.position, out navMeshHit, 10.0f, -1);
+            if (navMeshHit.hit)
+            {
+                transform.position = navMeshHit.position;
+            }
         }
 
         lastLeftLegIKPos = curLeftLegIKPos;
@@ -95,18 +112,33 @@ public class NinControllerTwo : MonoBehaviour
 
         previousPosition = transform.position;
     }
+    void NavigateViaAgent()
+    {
+        var navMeshAgent = GetComponent<NavMeshAgent>();
+        var target = GameObject.Find("NinTarget");
+
+        // Debug.Log(NavMesh.Raycast(transform.position, target.transform.position, out hit, -1));
+
+        Debug.Log("SamplePosition");
+        Debug.Log(NavMesh.SamplePosition(target.transform.position, out NavMeshHit hit, 10.0f, -1));
+        Debug.Log(hit);
+        return;
+
+        navMeshAgent.destination = GameObject.Find("NinTarget").transform.position;
+        navMeshAgent.speed = 3;
+    }
+
     void Navigate()
     {
         var animator = GetComponent<Animator>();
         var target = GameObject.Find("NinTarget");
+        nextCornerIsDefined = false;
 
-        // Debug.Log("NavMeshAgent.areaMask");
         /*Debug.Log("angleToCurPosition");
         Debug.Log(angleToCurPosition);*/
 
         NavMeshPath testPath = new();
-        NavMesh.CalculatePath(transform.position, target.transform.position, -1, testPath);
-        // Debug.Log(testPath.corners);
+        NavMesh.CalculatePath(transform.position, target.transform.position, 1, testPath);
 
         var distanceToTarget = (target.transform.position - transform.position).magnitude;
         if (testPath.corners.Length < 2 || distanceToTarget < 5)
@@ -115,26 +147,27 @@ public class NinControllerTwo : MonoBehaviour
             return;
         }
 
-        animator.SetBool("isWalking", true);
-        // var vectorToNextPoint = (testPath.corners[1] - transform.position);
-        // var directionToNextPoint = vectorToNextPoint.normalized;
-        // transform.position += directionToNextPoint * 0.05f;
+        var vectorToNextPoint = (testPath.corners[1] - transform.position);
+
+        var angleToNextPoint = Vector3.Angle(transform.forward, vectorToNextPoint);
+
+        if (angleToNextPoint < 45)
+        {
+            animator.SetBool("isWalking", true);
+        } else
+        {
+            animator.SetBool("isWalking", false);
+        }
 
         Quaternion initialRotQuaternion = transform.rotation;
 
         transform.LookAt(testPath.corners[1]);
         Quaternion rotQuaternionToNextCorner = transform.rotation;
 
+        nextCorner = testPath.corners[1];
+        nextCornerIsDefined = true;
+
         transform.rotation = Quaternion.Slerp(rotQuaternionToNextCorner, initialRotQuaternion, 0.995f);
-
-        //var quaternionToNextCorner = new Quaternion();
-        //var vectorToNextCorner = (testPath.corners[1] - transform.position);
-        //var directionToNextPoint = vectorToNextCorner.normalized;
-
-       // transform.ROt(Vector3.Slerp(transform.forward, vectorToNextCorner, 0.999f));
-        // quaternionToNextCorner.SetFromToRotation(transform.forward, directionToNextPoint);
-        // transform.rotation = quaternionToNextCorner; //Quaternion.Lerp(quaternionToNextCorner, transform.rotation, 0.0f);
-
     }
 
     // Update is called once per frame
