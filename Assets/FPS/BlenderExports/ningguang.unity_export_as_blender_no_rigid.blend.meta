@@ -11,7 +11,77 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: GlowingEyesMat
-    second: {fileID: 2100000, guid: e8e1684796f64e04e9f202432038731a, type: 2}
+    second: {fileID: 2100000, guid: 6487fdefd669d4dbc91709a177cd4b93, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "\u56F4\u8116.002"
+    second: {fileID: 2100000, guid: 8f68363df440cad46b2414fa1f288820, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "\u5934\u53D1.002"
+    second: {fileID: 2100000, guid: df25b42491353ac47aa28c5a44645c51, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "\u5934\u9970.002"
+    second: {fileID: 2100000, guid: 600a75f9f89f5314b87449afb845713c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "\u624B\u5957.002"
+    second: {fileID: 2100000, guid: 6eacaa7497c6bd440958c796d45c06d4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "\u76AE\u80A4.002"
+    second: {fileID: 2100000, guid: d51d8f872c0dce74ebef68af6120651f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "\u773C\u767D.002"
+    second: {fileID: 2100000, guid: c4dddb3a3a5f9274791c12aeef6fbea3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "\u773C\u775B.002"
+    second: {fileID: 2100000, guid: 5f723df591a7eba4ca63b6ae68974dbf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "\u8138.002"
+    second: {fileID: 2100000, guid: af9f0acfec8679446ad3f6e5feabd50d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "\u817F.002"
+    second: {fileID: 2100000, guid: da81248ee73a91b4d9f15337e8a28019, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "\u817F\u9970.002"
+    second: {fileID: 2100000, guid: 952a768cd48f47345bdd05d6f0878e6a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "\u8863\u670D.002"
+    second: {fileID: 2100000, guid: c9b24ef06e7775d41a38a27469c812f6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "\u8868\u60C5.002"
+    second: {fileID: 2100000, guid: 71bc19a21aea35546b35118f4b510b02, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "\u8896\u5B50.002"
+    second: {fileID: 2100000, guid: de50997d75837bf48ad7d6dc54defb7a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "\u978B\u5B50.002"
+    second: {fileID: 2100000, guid: 49589f0d57f7af745868f9cddcc675fb, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
