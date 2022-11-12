@@ -71,6 +71,7 @@ GameObject:
   - component: {fileID: 7229230405440576095}
   - component: {fileID: 2299939947175271828}
   - component: {fileID: 6238742331018316753}
+  - component: {fileID: 3287867521713918479}
   m_Layer: 0
   m_Name: TestEnemy
   m_TagString: Untagged
@@ -167,7 +168,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2015434656898269652}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1857b2df8de24b24190ce9e067d2e1e4, type: 3}
   m_Name: 
@@ -225,7 +226,7 @@ NavMeshAgent:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2015434656898269652}
-  m_Enabled: 1
+  m_Enabled: 0
   m_AgentTypeID: 0
   m_Radius: 0.5
   m_Speed: 3.5
@@ -405,6 +406,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3cdb024743733e24e91ac3b9b2c54e03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3287867521713918479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2015434656898269652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2173305c95f07a4d81c18a193d9de06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2201913640410082181

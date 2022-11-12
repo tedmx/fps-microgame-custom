@@ -43,6 +43,14 @@ public class NinController : MonoBehaviour
     void UpdatePlayerTrackingSight()
     {
         var neckBone = GameObject.Find("Neck");
+
+        var isKicking = animator.GetBool("shouldDoDownPunch");
+        if (isKicking)
+        {
+            prevNeckRotation = neckBone.transform.rotation;
+            return;
+        }
+
         var player = GameObject.Find("Player");
 
         var quaternionToPlayer = new Quaternion();
@@ -184,21 +192,33 @@ public class NinController : MonoBehaviour
         upperBodyBone.transform.Rotate(0, rotationDegToSet, 0);
     }
 
-    public void handleColliderEvent(string eventType, Collider colArg)
+    public void handleColliderEvent(string eventType, Collider  colArg)
     {
         if (!colArg.GetComponent<ABlockController>())
         {
             return;
         }
-        var readyForNextPunch = (DateTime.Now.Ticks - lastHitTime) / TimeSpan.TicksPerSecond > 5;
+
+        var readyForNextPunch = (DateTime.Now.Ticks - lastHitTime) / TimeSpan.TicksPerSecond > 25;
+        if (readyForNextPunch && eventType == "objectInDownPunchArea")
+        {
+            animator.SetTrigger("shouldDoDownPunch");
+            lastHitTime = DateTime.Now.Ticks;
+            animator.SetBool("isWalking", false);
+            return;
+        }
         if (readyForNextPunch)
         {
-            var animator = GetComponent<Animator>();
+            return;
             animator.SetTrigger("shouldKick");
             lastHitTime = DateTime.Now.Ticks;
             animator.SetBool("isWalking", false);
         }
         // Debug.Log("ABlock in punch area", colArg);
+    }
+    void HandleDownPunchAnimEnd()
+    {
+        transform.position = transform.position + transform.forward * 0.527f * transform.localScale.x;
     }
 
     void UpdateFight()
