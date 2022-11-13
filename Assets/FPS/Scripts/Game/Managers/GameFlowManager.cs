@@ -21,6 +21,7 @@ namespace Unity.FPS.Game
         public string WinGameMessage;
         [Tooltip("Duration of delay before the win message")]
         public float DelayBeforeWinMessage = 2f;
+        public bool endGameOnWin = true;
 
         [Tooltip("Sound played on win")] public AudioClip VictorySound;
 
@@ -46,7 +47,7 @@ namespace Unity.FPS.Game
 
         void Update()
         {
-            if (GameIsEnding)
+            if (GameIsEnding && m_SceneToLoad != null)
             {
                 float timeRatio = 1 - (m_TimeLoadEndGameScene - Time.time) / EndSceneLoadDelay;
                 EndGameFadeCanvasGroup.alpha = timeRatio;
@@ -74,8 +75,14 @@ namespace Unity.FPS.Game
             // Remember that we need to load the appropriate end scene after a delay
             GameIsEnding = true;
             EndGameFadeCanvasGroup.gameObject.SetActive(true);
-            if (win)
+            if (
+                win
+            )
             {
+                if (!endGameOnWin)
+                {
+                    return;
+                }
                 m_SceneToLoad = WinSceneName;
                 m_TimeLoadEndGameScene = Time.time + EndSceneLoadDelay + DelayBeforeFadeToBlack;
 

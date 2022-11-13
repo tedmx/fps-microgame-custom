@@ -2,7 +2,9 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using TMPro;
 using Unity.FPS.AI;
+using Unity.FPS.Gameplay;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
@@ -33,6 +35,11 @@ public class NinController : MonoBehaviour
     Quaternion prevNeckRotation;
 
     Animator animator;
+
+    GameObject navTarget;
+
+    bool doingSharpTurn = false;
+    bool isDoingFightMove = false;
 
     void Start()
     {
@@ -98,10 +105,15 @@ public class NinController : MonoBehaviour
 
     void UpdateWalk()
     {
+        NavMeshHit navMeshHit;
+        NavMesh.SamplePosition(transform.position, out navMeshHit, 10.0f, -1);
+        transform.position = navMeshHit.position;
+
         if (!animator.GetBool("isWalking"))
         {
             return;
         }
+
         var curLeftLegIKPos = GameObject.Find("LegL_IK_Control").transform.position - transform.position;
         var curRightLegIKPos = GameObject.Find("LegR_IK_Control").transform.position - transform.position;
 
@@ -116,7 +128,6 @@ public class NinController : MonoBehaviour
             var distance = (lastLeftLegIKPos - curLeftLegIKPos).magnitude;
             transform.position += directionVector * distance;
 
-            NavMeshHit navMeshHit;
             NavMesh.SamplePosition(transform.position, out navMeshHit, 10.0f, -1);
             if (navMeshHit.hit)
             {
@@ -128,7 +139,6 @@ public class NinController : MonoBehaviour
             var distance = (lastRightLegIKPos - curRightLegIKPos).magnitude;
             transform.position += directionVector * distance;
 
-            NavMeshHit navMeshHit;
             NavMesh.SamplePosition(transform.position, out navMeshHit, 10.0f, -1);
             if (navMeshHit.hit)
             {
@@ -142,19 +152,87 @@ public class NinController : MonoBehaviour
         previousPosition = transform.position;
     }
 
+    void SelectNavTarget ()
+    {
+        if (
+            navTarget == null
+            || navTarget.transform == null
+            || navTarget.transform.position.x == float.PositiveInfinity
+            || navTarget.transform.position.x == float.NegativeInfinity
+        )
+        {
+            navTarget = null;
+        }
+
+        var enemyManager = GameObject.Find("GameManager").GetComponent<EnemyManager>();
+
+        EnemyController closestAliveEnemy = null;
+        var closestEnemyDistance = 10000000.0f;
+
+        foreach (EnemyController curEnemyCtrl in enemyManager.Enemies)
+        {
+            if (curEnemyCtrl == null)
+            {
+                continue;
+            }
+            var enemyGO = curEnemyCtrl.gameObject;
+            if (enemyGO == null)
+            {
+                continue;
+            }
+            var enemyDistance = (enemyGO.transform.position - transform.position).magnitude;
+            if (enemyDistance < closestEnemyDistance)
+            {
+                closestAliveEnemy = curEnemyCtrl;
+                closestEnemyDistance = enemyDistance;
+            }
+        }
+
+        var manualNinTargetObject = GameObject.Find("NinTarget");
+
+        if (
+            closestAliveEnemy != null
+            && (
+                navTarget == null
+                || navTarget == manualNinTargetObject
+            )
+        )
+        {
+            navTarget = closestAliveEnemy.gameObject;
+            return;
+        }
+
+        if (!navTarget) { 
+            navTarget = manualNinTargetObject;
+        }
+    }
+
     void Navigate()
     {
-        var target = GameObject.Find("NinTarget");
+        if (isDoingFightMove)
+        {
+            return;
+        }
+
+        SelectNavTarget();
+
+        doingSharpTurn = false;
         nextCornerIsDefined = false;
 
         /*Debug.Log("angleToCurPosition");
         Debug.Log(angleToCurPosition);*/
 
-        NavMeshPath testPath = new();
-        NavMesh.CalculatePath(transform.position, target.transform.position, 1, testPath);
+        Vector3 targetPosition;
+        NavMeshHit navTargetNavMeshHit;
+        NavMesh.SamplePosition(navTarget.transform.position, out navTargetNavMeshHit, 10.0f, -1);
 
-        var distanceToTarget = (target.transform.position - transform.position).magnitude;
-        if (testPath.corners.Length < 2 || distanceToTarget < 5)
+        targetPosition = navTargetNavMeshHit.position;
+
+        NavMeshPath testPath = new();
+        NavMesh.CalculatePath(transform.position, targetPosition, 1, testPath);
+
+        var distanceToTarget = (targetPosition - transform.position).magnitude;
+        if (testPath.corners.Length < 2 || distanceToTarget < 1)
         {
             animator.SetBool("isWalking", false);
             return;
@@ -169,6 +247,7 @@ public class NinController : MonoBehaviour
             animator.SetBool("isWalking", true);
         } else
         {
+            doingSharpTurn = true;
             animator.SetBool("isWalking", false);
         }
 
@@ -192,43 +271,70 @@ public class NinController : MonoBehaviour
         upperBodyBone.transform.Rotate(0, rotationDegToSet, 0);
     }
 
-    public void handleColliderEvent(string eventType, Collider  colArg)
+    public void handleColliderEvent(string eventType, string colliderMeshName, Collider  colArg)
     {
-        if (!colArg.GetComponent<ABlockController>())
-        {
-            return;
-        }
+        var secondsSinceLastPunch = (DateTime.Now.Ticks - lastHitTime) / TimeSpan.TicksPerSecond;
+        var readyToPunchGeneral = !doingSharpTurn;
+        var readyToPunchBlock = readyToPunchGeneral && secondsSinceLastPunch > 25;
+        var readyToPunchEnemy = readyToPunchGeneral && secondsSinceLastPunch > 8;
 
-        var readyForNextPunch = (DateTime.Now.Ticks - lastHitTime) / TimeSpan.TicksPerSecond > 25;
-        if (readyForNextPunch && eventType == "objectInDownPunchArea")
+        if (
+            colliderMeshName == "downPunchArea"
+            && colArg.GetComponent<ABlockController>()
+            && readyToPunchBlock
+        )
         {
             animator.SetTrigger("shouldDoDownPunch");
             lastHitTime = DateTime.Now.Ticks;
             animator.SetBool("isWalking", false);
+            isDoingFightMove = true;
             return;
         }
-        if (readyForNextPunch)
+        else if (
+            colliderMeshName == "leftLegLowKickArea"
+            && (
+                colArg.GetComponent<ABlockController>()
+                || colArg.GetComponent<EnemyController>()
+            )
+            && readyToPunchEnemy
+        )
         {
-            return;
-            animator.SetTrigger("shouldKick");
+            animator.SetTrigger("shouldDoLeftLegLowKick");
             lastHitTime = DateTime.Now.Ticks;
             animator.SetBool("isWalking", false);
+            isDoingFightMove = true;
+            return;
+        } 
+        else if (
+            colliderMeshName == "downPunchAreaExtended"
+            && colArg.GetComponent<EnemyController>()
+            && readyToPunchEnemy
+        )
+        {
+            animator.SetTrigger("shouldDoDownPunch");
+            lastHitTime = DateTime.Now.Ticks;
+            animator.SetBool("isWalking", false);
+            isDoingFightMove = true;
+            return;
         }
-        // Debug.Log("ABlock in punch area", colArg);
     }
     void HandleDownPunchAnimEnd()
     {
         transform.position = transform.position + transform.forward * 0.527f * transform.localScale.x;
+        isDoingFightMove = false;
+    }
+    void HandleFightMoveEnd()
+    {
+        isDoingFightMove = false;
     }
 
     void UpdateFight()
     {
-        var punchFrontAreaCtrl = transform.Find("PunchFrontArea").gameObject.GetComponent<PunchFrontAreaCtrl>();
+        // var punchFrontAreaCtrl = transform.Find("PunchFrontArea").gameObject.GetComponent<PunchFrontAreaCtrl>();
 
-        Collision lastCollisionInfo = punchFrontAreaCtrl.lastCollisionInfo;
+        // Collision lastCollisionInfo = punchFrontAreaCtrl.lastCollisionInfo;
 
         // Debug.Log(lastCollisionInfo);
-        return;
 
         /*
         Collider[] collidersInPunchArea = Physics.OverlapSphere(punchFrontAreaCollider.transform.position, punchFrontAreaCollider.radius * transform.localScale.x);

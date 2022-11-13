@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.FPS.AI;
+using Unity.FPS.Game;
 using UnityEngine;
 
 public class TestEnemyCtrl : MonoBehaviour
@@ -24,5 +25,11 @@ public class TestEnemyCtrl : MonoBehaviour
             enemyMobileScriptComp.enabled = false;
         }
         prevPosition = transform.position;
+
+        if (transform.position.y < -10)
+        {
+            Health thisHealth = GetComponent<Health>();
+            thisHealth.TakeDamage(1000, gameObject);
+        }
     }
 }

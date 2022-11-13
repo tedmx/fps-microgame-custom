@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DownPunchAreaCtrl : MonoBehaviour
+public class TriggerMeshCtrl : MonoBehaviour
 {
     public GameObject ninRootObject;
     public Collision lastCollisionInfo;

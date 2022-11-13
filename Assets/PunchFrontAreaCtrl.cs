@@ -30,7 +30,7 @@ public class PunchFrontAreaCtrl : MonoBehaviour
     private void OnTriggerStay(Collider colliderInfo)
     {
 
-        ninController.handleColliderEvent("objectInPunchFrontArea", colliderInfo);
+        ninController.handleColliderEvent("objectInTriggerMesh", "punchArea", colliderInfo);
         // Debug.Log("OnTriggerStay");
     }
 }
