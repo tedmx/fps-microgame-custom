@@ -68,6 +68,10 @@ namespace Unity.FPS.Game
 
         void EndGame(bool win)
         {
+            if (win && !endGameOnWin)
+            {
+                return;
+            }
             // unlocks the cursor before leaving the scene, to be able to click buttons
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
@@ -79,10 +83,6 @@ namespace Unity.FPS.Game
                 win
             )
             {
-                if (!endGameOnWin)
-                {
-                    return;
-                }
                 m_SceneToLoad = WinSceneName;
                 m_TimeLoadEndGameScene = Time.time + EndSceneLoadDelay + DelayBeforeFadeToBlack;
 

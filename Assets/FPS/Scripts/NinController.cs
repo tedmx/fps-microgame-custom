@@ -8,6 +8,7 @@ using Unity.FPS.Gameplay;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UIElements;
 using UnityEngine.XR;
 using static UnityEngine.GraphicsBuffer;
 
@@ -35,16 +36,30 @@ public class NinController : MonoBehaviour
     Quaternion prevNeckRotation;
 
     Animator animator;
+    public GameObject animatorHostGO;
 
     GameObject navTarget;
 
     bool doingSharpTurn = false;
     bool isDoingFightMove = false;
 
+    public GameObject leftAnkleBone;
+
+    public GameObject leftAnkleFastCollider;
+    bool teleportLeftAnkleRigidbody = false;
+
+    public GameObject rightWristBone;
+
+    public GameObject rightWristFastCollider;
+    bool teleportRightWristRigidbody = false;
+
+    public Vector3 xyzAbc;
+
     void Start()
     {
-        animator = GetComponent<Animator>();
+        animator = animatorHostGO.GetComponent<Animator>();
         prevNeckRotation = GameObject.Find("Neck").transform.rotation;
+        // leftAnkleFastCollider.SetActive(false);
     }
 
     void UpdatePlayerTrackingSight()
@@ -75,7 +90,6 @@ public class NinController : MonoBehaviour
 
         if (playerIsBehind || playerIsTooFarAway)
         {
-            var animator = GetComponent<Animator>();
             var isWalking = animator.GetBool("isWalking");
             if (isWalking)
             {
@@ -234,6 +248,7 @@ public class NinController : MonoBehaviour
         var distanceToTarget = (targetPosition - transform.position).magnitude;
         if (testPath.corners.Length < 2 || distanceToTarget < 1)
         {
+            // Debug.Log("stopping walk");
             animator.SetBool("isWalking", false);
             return;
         }
@@ -244,9 +259,11 @@ public class NinController : MonoBehaviour
 
         if (angleToNextPoint < 45)
         {
+            // Debug.Log("resuming walk");
             animator.SetBool("isWalking", true);
         } else
         {
+            // Debug.Log("stopping walk");
             doingSharpTurn = true;
             animator.SetBool("isWalking", false);
         }
@@ -275,7 +292,7 @@ public class NinController : MonoBehaviour
     {
         var secondsSinceLastPunch = (DateTime.Now.Ticks - lastHitTime) / TimeSpan.TicksPerSecond;
         var readyToPunchGeneral = !doingSharpTurn;
-        var readyToPunchBlock = readyToPunchGeneral && secondsSinceLastPunch > 25;
+        var readyToPunchBlock = readyToPunchGeneral && secondsSinceLastPunch > 8;
         var readyToPunchEnemy = readyToPunchGeneral && secondsSinceLastPunch > 8;
 
         if (
@@ -286,6 +303,7 @@ public class NinController : MonoBehaviour
         {
             animator.SetTrigger("shouldDoDownPunch");
             lastHitTime = DateTime.Now.Ticks;
+            // Debug.Log("stopping walk, ready to punch");
             animator.SetBool("isWalking", false);
             isDoingFightMove = true;
             return;
@@ -320,12 +338,63 @@ public class NinController : MonoBehaviour
     }
     void HandleDownPunchAnimEnd()
     {
-        transform.position = transform.position + transform.forward * 0.527f * transform.localScale.x;
+
+        // Debug.Log("in HandleDownPunchAnimEnd");
+        var ankleRigidbody = leftAnkleFastCollider.GetComponent<Rigidbody>();
+        // leftAnkleBone.GetComponent<BoneStatusInformer>().teleportRigidboneTrackers = true;
         isDoingFightMove = false;
+
+        // Debug.Log("HandleDownPunchAnimEnd: rigidbody position before adjustment is " + ankleRigidbody.position);
+        transform.position = transform.position + transform.forward * 0.527f * transform.localScale.x;
+        // teleportTestCollider = true;
+        // Debug.Log("HandleDownPunchAnimEnd: adjusting model position");
+        // leftAnkleFastCollider.GetComponent<Rigidbody>().position = leftAnkleBone.transform.position;
+        // Debug.Log("HandleDownPunchAnimEnd: rigidbody position after adjustment is " + ankleRigidbody.position);
+
+        animator.Play("rest");
+
+    }
+
+    void HandleAfterWalkAnimStart()
+    {
+        // leftAnkleBone.GetComponent<BoneStatusInformer>().teleportRigidboneTrackers = false;
+    }
+
+    void HandleAfterRestAnimStart()
+    {
+        // leftAnkleBone.GetComponent<BoneStatusInformer>().teleportRigidboneTrackers = false;
     }
     void HandleFightMoveEnd()
     {
         isDoingFightMove = false;
+    }
+
+    void HandleRapidLeftLegMoveStart()
+    {
+        Debug.Log("LeftAnkle: MovePosition enabled");
+        teleportLeftAnkleRigidbody = false;
+        // leftAnkleFastCollider.SetActive(true);
+    }
+
+    void HandleRapidLeftLegMoveEnd()
+    {
+        Debug.Log("LeftAnkle: MovePosition disabled");
+        teleportLeftAnkleRigidbody = true;
+        // leftAnkleFastCollider.SetActive(false);
+    }
+
+    void HandleRapidRightArmMoveStart()
+    {
+        Debug.Log("RightArm: MovePosition enabled");
+        teleportRightWristRigidbody = false;
+        // leftAnkleFastCollider.SetActive(true);
+    }
+
+    void HandleRapidRightArmMoveEnd()
+    {
+        Debug.Log("RightArm: MovePosition disabled");
+        teleportRightWristRigidbody = true;
+        // leftAnkleFastCollider.SetActive(false);
     }
 
     void UpdateFight()
@@ -370,7 +439,43 @@ public class NinController : MonoBehaviour
 
         UpdateCameraShake();
 
+        // Debug.Log("in Update");
+
     }
+
+    private void FixedUpdate()
+    {
+        // Debug.Log("in FixedUpdate");
+        var ankleRigidbody = leftAnkleFastCollider.GetComponent<Rigidbody>();
+        var movementDelta = leftAnkleBone.transform.position - ankleRigidbody.position;
+        //  Debug.Log("Moving rigidbody from " + ankleRigidbody.position);
+        // Debug.Log("to " + leftAnkleBone.transform.position);
+        // Debug.Log("Movement magnitude is " + movementDelta.magnitude);
+        if (teleportLeftAnkleRigidbody)
+        {
+            // Debug.Log("Using teleport");
+            ankleRigidbody.position = leftAnkleBone.transform.position;
+        }
+        else
+        {
+            // Debug.Log("Using MovePosition");
+            ankleRigidbody.MovePosition(leftAnkleBone.transform.position);
+        }
+
+        var rightWristRigidbody = rightWristFastCollider.GetComponent<Rigidbody>();
+        if (teleportRightWristRigidbody)
+        {
+            // Debug.Log("Using teleport");
+            rightWristRigidbody.position = rightWristBone.transform.position;
+        }
+        else
+        {
+            // Debug.Log("Using MovePosition");
+            rightWristRigidbody.MovePosition(rightWristBone.transform.position);
+        }
+        
+    }
+
     private void LateUpdate()
     {
         UpdatePlayerTrackingSight();
