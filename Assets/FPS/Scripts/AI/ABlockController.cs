@@ -85,11 +85,14 @@ namespace Unity.FPS.AI
         Health m_Health;
         Actor m_Actor;
         Collider[] m_SelfColliders;
+        Collider collider;
         GameFlowManager m_GameFlowManager;
         bool m_WasDamagedThisFrame;
 
         void Start()
         {
+            collider = GetComponent<Collider>();
+
             m_ABlockManager = FindObjectOfType<ABlockManager>();
 
             m_ActorsManager = FindObjectOfType<ActorsManager>();
@@ -122,6 +125,16 @@ namespace Unity.FPS.AI
             }
 
             m_BodyFlashMaterialPropertyBlock = new MaterialPropertyBlock();
+        }
+
+        void OnCollisionEnter(Collision collision)
+        {
+            if (!this.gameObject.name.Contains("Special"))
+            {
+                return;
+            }
+            // GameObject otherObj = collision.gameObject;
+            // Debug.Log("Collided with: " + otherObj);
         }
 
         void Update()
