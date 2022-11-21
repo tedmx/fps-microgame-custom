@@ -18,7 +18,7 @@ public class NinController : MonoBehaviour
     public bool rightFeetMovesBack = false;
     public float forwardMoveSpeed = 0;
 
-    public float floorStepImpact = 0;
+    public float floorHitImpact = 0;
 
     public bool navigationIsStopped = false;
 
@@ -33,6 +33,7 @@ public class NinController : MonoBehaviour
     Vector3 lastLeftLegIKPos;
     Vector3 lastRightLegIKPos;
 
+    Quaternion prevRootRotation;
     Quaternion prevNeckRotation;
 
     Animator animator;
@@ -53,24 +54,33 @@ public class NinController : MonoBehaviour
     public GameObject rightWristFastCollider;
     bool teleportRightWristRigidbody = false;
 
+
+    GameObject player;
+
     void Start()
     {
         animator = animatorHostGO.GetComponent<Animator>();
         prevNeckRotation = GameObject.Find("Neck").transform.rotation;
+        player = GameObject.Find("Player");
     }
 
     void UpdatePlayerTrackingSight()
     {
         var neckBone = GameObject.Find("Neck");
 
+        var upperBody2Bone = GameObject.Find("UpperBody2");
+
+        // neckBone.transform.rotation = upperBody2Bone.transform.rotation;
+
+        return;
+
         var isKicking = animator.GetBool("shouldDoDownPunch");
         if (isKicking)
         {
             prevNeckRotation = neckBone.transform.rotation;
+            prevRootRotation = transform.rotation;
             return;
         }
-
-        var player = GameObject.Find("Player");
 
         var quaternionToPlayer = new Quaternion();
         quaternionToPlayer.SetLookRotation((player.transform.position - neckBone.transform.position).normalized, Vector3.up);
@@ -100,18 +110,25 @@ public class NinController : MonoBehaviour
 
         neckBone.transform.rotation = Quaternion.Slerp(targetRotation, prevNeckRotation, 0.999f);
         prevNeckRotation = neckBone.transform.rotation;
+        prevRootRotation = transform.rotation;
     }
 
     void UpdateCameraShake()
     {
+        if (floorHitImpact < 0.01)
+        {
+            return;
+        }
+
         var player = GameObject.Find("Player");
         var mainCamera = GameObject.Find("Main Camera");
-
         var shakeController = mainCamera.GetComponent("CameraShake") as CameraShake;
+
         var distanceToPlayer = Vector3.Distance(player.transform.position, transform.position);
         var distanceDampenFactor = Mathf.Min(1, 1 / distanceToPlayer);
-        shakeController.forceShakingSwitch = floorStepImpact > 0;
-        shakeController.shakeAmount = floorStepImpact * distanceDampenFactor;
+
+        shakeController.forceShakingSwitch = true;
+        shakeController.shakeAmount = floorHitImpact * distanceDampenFactor;
     }
 
     void UpdateWalk()
@@ -421,19 +438,14 @@ public class NinController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        // Debug.Log("FixedUpdate");
         var ankleRigidbody = leftAnkleFastCollider.GetComponent<Rigidbody>();
         if (teleportLeftAnkleRigidbody)
         {
-            // Debug.Log("changing ankleRigidbody.position from " + ankleRigidbody.position + " to " + leftAnkleBone.transform.position);
             ankleRigidbody.position = leftAnkleBone.transform.position;
-            // Debug.Log("now ankleRigidbody.position is " + ankleRigidbody.position);
         }
         else
         {
-            // Debug.Log("changing ankleRigidbody.position via MovePosition from " + ankleRigidbody.position + " to " + leftAnkleBone.transform.position);
             ankleRigidbody.MovePosition(leftAnkleBone.transform.position);
-            // Debug.Log("now ankleRigidbody.position is " + ankleRigidbody.position);
         }
 
         var rightWristRigidbody = rightWristFastCollider.GetComponent<Rigidbody>();
