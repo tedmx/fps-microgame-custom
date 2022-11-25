@@ -150,7 +150,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: -15.916, y: 0, z: 0}
+        value: {x: -15.916, y: 0, z: -1.731}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -195,7 +195,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 4.883333
-        value: {x: -15.916, y: 0, z: 0}
+        value: {x: -15.916, y: 0, z: -1.731}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -211,7 +211,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: 1.43, y: 20.358, z: 2.088}
+        value: {x: -1.077, y: 20.266, z: 2.088}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -221,8 +221,8 @@ AnimationClip:
       - serializedVersion: 3
         time: 0.76666665
         value: {x: 1.43, y: 20.358, z: 2.088}
-        inSlope: {x: 0, y: 0, z: 0}
-        outSlope: {x: 0, y: 0, z: 0}
+        inSlope: {x: 6.6853333, y: 0.24533081, z: 0}
+        outSlope: {x: 6.6853333, y: 0.24533081, z: 0}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
@@ -247,7 +247,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 4.883333
-        value: {x: 1.43, y: 20.358, z: 2.088}
+        value: {x: -1.077, y: 20.266, z: 2.088}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -263,7 +263,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: 1.762, y: -21.984, z: -5.158}
+        value: {x: -0.235, y: -21.804, z: -5.156}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -273,8 +273,8 @@ AnimationClip:
       - serializedVersion: 3
         time: 0.76666665
         value: {x: 6.648, y: -15.802, z: -4.952}
-        inSlope: {x: 0, y: 16.485332, z: 0.5493329}
-        outSlope: {x: 0, y: 16.485332, z: 0.5493329}
+        inSlope: {x: 0, y: 16.005337, z: 0.54399997}
+        outSlope: {x: 0, y: 16.005337, z: 0.54399997}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
@@ -299,7 +299,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 4.883333
-        value: {x: 1.762, y: -21.984, z: -5.158}
+        value: {x: -0.235, y: -21.804, z: -5.156}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -1409,7 +1409,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: 1.135, y: 8.755, z: -11.071}
+        value: {x: 1.654, y: 8.365, z: -6.287}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -1419,8 +1419,8 @@ AnimationClip:
       - serializedVersion: 3
         time: 0.95
         value: {x: 1.135, y: 8.755, z: -11.071}
-        inSlope: {x: 0, y: 0, z: 0}
-        outSlope: {x: 0, y: 0, z: 0}
+        inSlope: {x: -1.4154547, y: 1.0636373, z: -4.692272}
+        outSlope: {x: -1.4154547, y: 1.0636373, z: -4.692272}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
@@ -1445,7 +1445,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 4.883333
-        value: {x: 1.135, y: 8.755, z: -11.071}
+        value: {x: 1.654, y: 8.365, z: -6.287}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -1515,8 +1515,35 @@ AnimationClip:
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
+        time: 4.1833334
+        value: {x: -0.12934104, y: 0.107, z: 0.594}
+        inSlope: {x: 0, y: 0.0021428615, z: 0}
+        outSlope: {x: 0, y: 0.0021428615, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 4.366667
+        value: {x: -0.12934104, y: 0.108, z: 0.594}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 4.5666666
+        value: {x: -0.13134104, y: 0.093, z: 0.594}
+        inSlope: {x: -0.015483909, y: -0.023225807, z: 0}
+        outSlope: {x: -0.015483909, y: -0.023225807, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
         time: 4.883333
-        value: {x: -0.141, y: 0.078, z: 0.586}
+        value: {x: -0.141, y: 0.09, z: 0.601}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -1567,8 +1594,62 @@ AnimationClip:
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
+        time: 3.6666667
+        value: {x: -0.01, y: 0.127, z: 0.374}
+        inSlope: {x: 0.031058826, y: 0.0028235244, z: 0.19764702}
+        outSlope: {x: 0.031058826, y: 0.0028235244, z: 0.19764702}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 3.9166667
+        value: {x: 0.001, y: 0.129, z: 0.444}
+        inSlope: {x: 0.020785473, y: 0, z: 0.23806451}
+        outSlope: {x: 0.020785473, y: 0, z: 0.23806451}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.93374634, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 4.1833334
+        value: {x: 0.009, y: 0.116, z: 0.497}
+        inSlope: {x: 0.028888887, y: -0.026666652, z: 0.18222225}
+        outSlope: {x: 0.028888887, y: -0.026666652, z: 0.18222225}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 4.366667
+        value: {x: 0.014, y: 0.113, z: 0.526}
+        inSlope: {x: 0.015999984, y: -0.023999989, z: 0.16399992}
+        outSlope: {x: 0.015999984, y: -0.023999989, z: 0.16399992}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 4.4333334
+        value: {x: 0.015, y: 0.11, z: 0.538}
+        inSlope: {x: 0.020000003, y: -0.060000032, z: 0.16000018}
+        outSlope: {x: 0.020000003, y: -0.060000032, z: 0.16000018}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 4.5666666
+        value: {x: 0.018, y: 0.091, z: 0.558}
+        inSlope: {x: 0.026666675, y: -0.035555575, z: 0.124444485}
+        outSlope: {x: 0.026666675, y: -0.035555575, z: 0.124444485}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
         time: 4.883333
-        value: {x: 0.081, y: 0.076, z: 0.578}
+        value: {x: 0.078, y: 0.087, z: 0.594}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -1614,6 +1695,15 @@ AnimationClip:
         value: {x: -0.047, y: -0.125, z: 0.226}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 4.5666666
+        value: {x: -0.002, y: 0.127, z: -0.013}
+        inSlope: {x: 0.003356648, y: 0, z: -0.006619416}
+        outSlope: {x: 0.003356648, y: 0, z: -0.006619416}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
@@ -1666,6 +1756,15 @@ AnimationClip:
         value: {x: -0.047, y: -0.129, z: 0.229}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 4.5666666
+        value: {x: -0.002, y: 0.123, z: -0.01}
+        inSlope: {x: 0.003356648, y: 0, z: -0.0057825306}
+        outSlope: {x: 0.003356648, y: 0, z: -0.0057825306}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
@@ -1770,15 +1869,15 @@ AnimationClip:
       - serializedVersion: 3
         time: 2.95
         value: {x: -0.015, y: 0.202, z: 0.79}
-        inSlope: {x: 0.017021276, y: 0.14765958, z: 0}
-        outSlope: {x: 0.017021276, y: 0.14765958, z: 0}
+        inSlope: {x: 0.017021276, y: 0.15234043, z: 0}
+        outSlope: {x: 0.017021276, y: 0.15234043, z: 0}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 4.883333
-        value: {x: 0.293, y: 0.415, z: 0.577}
+        value: {x: 0.293, y: 0.426, z: 0.592}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -1831,15 +1930,15 @@ AnimationClip:
       - serializedVersion: 3
         time: 2.5
         value: {x: -0.223, y: 0.763, z: 0.405}
-        inSlope: {x: -0.010640394, y: -0.031921197, z: 0}
-        outSlope: {x: -0.010640394, y: -0.031921197, z: 0}
+        inSlope: {x: -0.010640394, y: -0.031921193, z: 0}
+        outSlope: {x: -0.010640394, y: -0.031921193, z: 0}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 4.883333
-        value: {x: -0.241, y: 0.634, z: 0.594}
+        value: {x: -0.241, y: 0.645, z: 0.609}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -1891,7 +1990,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 4.883333
-        value: {x: 0.32, y: 0.766, z: -1.284}
+        value: {x: 0.32, y: 0.777, z: -1.269}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -1952,7 +2051,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 4.883333
-        value: {x: 0.32, y: 0.766, z: -1.284}
+        value: {x: 0.32, y: 0.777, z: -1.269}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -2004,7 +2103,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 4.883333
-        value: {x: -0.295, y: 0.417, z: 1.604}
+        value: {x: -0.295, y: 0.428, z: 1.619}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -2056,7 +2155,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 4.883333
-        value: {x: 0.088, y: 0.861, z: 1.482}
+        value: {x: 0.03, y: 0.879, z: 1.49}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -2072,7 +2171,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0.006, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -2108,7 +2207,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 4.883333
-        value: {x: 0, y: -0.011, z: 0.527}
+        value: {x: -0, y: 0.006, z: 0.542}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -2619,6 +2718,33 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
+        time: 4.1833334
+        value: -0.12934104
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 4.366667
+        value: -0.12934104
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 4.5666666
+        value: -0.13134104
+        inSlope: -0.015483909
+        outSlope: -0.015483909
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
         time: 4.883333
         value: -0.141
         inSlope: 0
@@ -2692,8 +2818,35 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
+        time: 4.1833334
+        value: 0.107
+        inSlope: 0.0021428615
+        outSlope: 0.0021428615
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 4.366667
+        value: 0.108
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 4.5666666
+        value: 0.093
+        inSlope: -0.023225807
+        outSlope: -0.023225807
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
         time: 4.883333
-        value: 0.078
+        value: 0.09
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -2765,8 +2918,35 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
+        time: 4.1833334
+        value: 0.594
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 4.366667
+        value: 0.594
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 4.5666666
+        value: 0.594
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
         time: 4.883333
-        value: 0.586
+        value: 0.601
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -2820,8 +3000,62 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
+        time: 3.6666667
+        value: -0.01
+        inSlope: 0.031058826
+        outSlope: 0.031058826
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 3.9166667
+        value: 0.001
+        inSlope: 0.020785473
+        outSlope: 0.020785473
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.93374634
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 4.1833334
+        value: 0.009
+        inSlope: 0.028888887
+        outSlope: 0.028888887
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 4.366667
+        value: 0.014
+        inSlope: 0.015999984
+        outSlope: 0.015999984
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 4.4333334
+        value: 0.015
+        inSlope: 0.020000003
+        outSlope: 0.020000003
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 4.5666666
+        value: 0.018
+        inSlope: 0.026666675
+        outSlope: 0.026666675
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
         time: 4.883333
-        value: 0.081
+        value: 0.078
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -2875,8 +3109,62 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
+        time: 3.6666667
+        value: 0.127
+        inSlope: 0.0028235244
+        outSlope: 0.0028235244
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 3.9166667
+        value: 0.129
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 4.1833334
+        value: 0.116
+        inSlope: -0.026666652
+        outSlope: -0.026666652
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 4.366667
+        value: 0.113
+        inSlope: -0.023999989
+        outSlope: -0.023999989
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 4.4333334
+        value: 0.11
+        inSlope: -0.060000032
+        outSlope: -0.060000032
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 4.5666666
+        value: 0.091
+        inSlope: -0.035555575
+        outSlope: -0.035555575
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
         time: 4.883333
-        value: 0.076
+        value: 0.087
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -2930,8 +3218,62 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
+        time: 3.6666667
+        value: 0.374
+        inSlope: 0.19764702
+        outSlope: 0.19764702
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 3.9166667
+        value: 0.444
+        inSlope: 0.23806451
+        outSlope: 0.23806451
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 4.1833334
+        value: 0.497
+        inSlope: 0.18222225
+        outSlope: 0.18222225
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 4.366667
+        value: 0.526
+        inSlope: 0.16399992
+        outSlope: 0.16399992
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 4.4333334
+        value: 0.538
+        inSlope: 0.16000018
+        outSlope: 0.16000018
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 4.5666666
+        value: 0.558
+        inSlope: 0.124444485
+        outSlope: 0.124444485
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
         time: 4.883333
-        value: 0.578
+        value: 0.594
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -3369,6 +3711,15 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
+        time: 4.5666666
+        value: -0.002
+        inSlope: 0.003356648
+        outSlope: 0.003356648
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
         time: 4.883333
         value: -4.2138282e-16
         inSlope: 0
@@ -3417,6 +3768,15 @@ AnimationClip:
       - serializedVersion: 3
         time: 2.5
         value: -0.125
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 4.5666666
+        value: 0.127
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -3479,6 +3839,15 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
+        time: 4.5666666
+        value: -0.013
+        inSlope: -0.006619416
+        outSlope: -0.006619416
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
         time: 4.883333
         value: -0.01694407
         inSlope: 0
@@ -3529,6 +3898,15 @@ AnimationClip:
         value: -0.047
         inSlope: 0
         outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 4.5666666
+        value: -0.002
+        inSlope: 0.003356648
+        outSlope: 0.003356648
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
@@ -3589,6 +3967,15 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
+        time: 4.5666666
+        value: 0.123
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
         time: 4.883333
         value: 0.12273604
         inSlope: 0
@@ -3639,6 +4026,15 @@ AnimationClip:
         value: 0.229
         inSlope: 0
         outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 4.5666666
+        value: -0.01
+        inSlope: -0.0057825306
+        outSlope: -0.0057825306
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
@@ -3792,7 +4188,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0
+        value: -1.731
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -3837,7 +4233,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 4.883333
-        value: 0
+        value: -1.731
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -3856,7 +4252,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 1.43
+        value: -1.077
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -3866,8 +4262,8 @@ AnimationClip:
       - serializedVersion: 3
         time: 0.76666665
         value: 1.43
-        inSlope: 0
-        outSlope: 0
+        inSlope: 6.6853333
+        outSlope: 6.6853333
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
@@ -3892,7 +4288,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 4.883333
-        value: 1.43
+        value: -1.077
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -3911,7 +4307,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 20.358
+        value: 20.266
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -3921,8 +4317,8 @@ AnimationClip:
       - serializedVersion: 3
         time: 0.76666665
         value: 20.358
-        inSlope: 0
-        outSlope: 0
+        inSlope: 0.24533081
+        outSlope: 0.24533081
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
@@ -3947,7 +4343,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 4.883333
-        value: 20.358
+        value: 20.266
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -4212,15 +4608,15 @@ AnimationClip:
       - serializedVersion: 3
         time: 2.95
         value: 0.202
-        inSlope: 0.14765958
-        outSlope: 0.14765958
+        inSlope: 0.15234043
+        outSlope: 0.15234043
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 4.883333
-        value: 0.415
+        value: 0.426
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -4329,7 +4725,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 4.883333
-        value: 0.577
+        value: 0.592
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -4348,7 +4744,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 1.762
+        value: -0.235
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -4384,7 +4780,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 4.883333
-        value: 1.762
+        value: -0.235
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -4403,7 +4799,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -21.984
+        value: -21.804
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -4413,8 +4809,8 @@ AnimationClip:
       - serializedVersion: 3
         time: 0.76666665
         value: -15.802
-        inSlope: 16.485332
-        outSlope: 16.485332
+        inSlope: 16.005337
+        outSlope: 16.005337
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
@@ -4439,7 +4835,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 4.883333
-        value: -21.984
+        value: -21.804
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -4458,7 +4854,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -5.158
+        value: -5.156
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -4468,8 +4864,8 @@ AnimationClip:
       - serializedVersion: 3
         time: 0.76666665
         value: -4.952
-        inSlope: 0.5493329
-        outSlope: 0.5493329
+        inSlope: 0.54399997
+        outSlope: 0.54399997
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
@@ -4494,7 +4890,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 4.883333
-        value: -5.158
+        value: -5.156
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -4860,15 +5256,15 @@ AnimationClip:
       - serializedVersion: 3
         time: 2.5
         value: 0.763
-        inSlope: -0.031921197
-        outSlope: -0.031921197
+        inSlope: -0.031921193
+        outSlope: -0.031921193
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 4.883333
-        value: 0.634
+        value: 0.645
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -4932,7 +5328,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 4.883333
-        value: 0.594
+        value: 0.609
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -5042,7 +5438,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 4.883333
-        value: 0.766
+        value: 0.777
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -5097,7 +5493,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 4.883333
-        value: -1.284
+        value: -1.269
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -7451,7 +7847,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 4.883333
-        value: 0.766
+        value: 0.777
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -7515,7 +7911,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 4.883333
-        value: -1.284
+        value: -1.269
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -7817,7 +8213,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 4.883333
-        value: 0.417
+        value: 0.428
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -7872,7 +8268,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 4.883333
-        value: 1.604
+        value: 1.619
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -7927,7 +8323,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 4.883333
-        value: 0.088
+        value: 0.03
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -7982,7 +8378,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 4.883333
-        value: 0.861
+        value: 0.879
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -8037,7 +8433,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 4.883333
-        value: 1.482
+        value: 1.49
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -8092,7 +8488,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 4.883333
-        value: 0
+        value: -0
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -8111,7 +8507,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0
+        value: 0.006
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -8147,7 +8543,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 4.883333
-        value: -0.011
+        value: 0.006
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -8202,7 +8598,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 4.883333
-        value: 0.527
+        value: 0.542
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -9019,7 +9415,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 1.135
+        value: 1.654
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -9029,8 +9425,8 @@ AnimationClip:
       - serializedVersion: 3
         time: 0.95
         value: 1.135
-        inSlope: 0
-        outSlope: 0
+        inSlope: -1.4154547
+        outSlope: -1.4154547
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
@@ -9055,7 +9451,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 4.883333
-        value: 1.135
+        value: 1.654
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -9074,7 +9470,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 8.755
+        value: 8.365
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -9084,8 +9480,8 @@ AnimationClip:
       - serializedVersion: 3
         time: 0.95
         value: 8.755
-        inSlope: 0
-        outSlope: 0
+        inSlope: 1.0636373
+        outSlope: 1.0636373
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
@@ -9110,7 +9506,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 4.883333
-        value: 8.755
+        value: 8.365
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -9129,7 +9525,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -11.071
+        value: -6.287
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -9139,8 +9535,8 @@ AnimationClip:
       - serializedVersion: 3
         time: 0.95
         value: -11.071
-        inSlope: 0
-        outSlope: 0
+        inSlope: -4.692272
+        outSlope: -4.692272
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
@@ -9165,7 +9561,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 4.883333
-        value: -11.071
+        value: -6.287
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -9324,7 +9720,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2
+    path: ArmL_IK_Control
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -9334,7 +9730,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2
+    path: ArmL_IK_Control
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -9344,277 +9740,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.z
-    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_R/Shoulder_R/ShoulderC_R/Arm_R/ArmTwist_R/Elbow_R/HandTwist_R/Wrist_R/LittleFinger1_R/LittleFinger2_R
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.y
-    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_R/Shoulder_R/ShoulderC_R/Arm_R/ArmTwist_R/Elbow_R/HandTwist_R/Wrist_R/LittleFinger1_R/LittleFinger2_R
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.x
-    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_R/Shoulder_R/ShoulderC_R/Arm_R/ArmTwist_R/Elbow_R/HandTwist_R/Wrist_R/LittleFinger1_R/LittleFinger2_R
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.z
-    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_R/Shoulder_R/ShoulderC_R/Arm_R/ArmTwist_R/Elbow_R/HandTwist_R/Wrist_R/IndexFinger1_R/IndexFinger2_R
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.y
-    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_R/Shoulder_R/ShoulderC_R/Arm_R/ArmTwist_R/Elbow_R/HandTwist_R/Wrist_R/IndexFinger1_R/IndexFinger2_R
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.x
-    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_R/Shoulder_R/ShoulderC_R/Arm_R/ArmTwist_R/Elbow_R/HandTwist_R/Wrist_R/IndexFinger1_R/IndexFinger2_R
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.z
-    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_R/Shoulder_R
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.y
-    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_R/Shoulder_R
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.x
-    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_R/Shoulder_R
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.z
-    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_R/Shoulder_R/ShoulderC_R/Arm_R/ArmTwist_R/Elbow_R/HandTwist_R/Wrist_R/IndexFinger1_R/IndexFinger2_R/IndexFinger3_R
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.y
-    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_R/Shoulder_R/ShoulderC_R/Arm_R/ArmTwist_R/Elbow_R/HandTwist_R/Wrist_R/IndexFinger1_R/IndexFinger2_R/IndexFinger3_R
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.x
-    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_R/Shoulder_R/ShoulderC_R/Arm_R/ArmTwist_R/Elbow_R/HandTwist_R/Wrist_R/IndexFinger1_R/IndexFinger2_R/IndexFinger3_R
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.z
-    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_R/Shoulder_R/ShoulderC_R/Arm_R/ArmTwist_R/Elbow_R/HandTwist_R/Wrist_R/Thumb0_R/Thumb1_R
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.y
-    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_R/Shoulder_R/ShoulderC_R/Arm_R/ArmTwist_R/Elbow_R/HandTwist_R/Wrist_R/Thumb0_R/Thumb1_R
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.x
-    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_R/Shoulder_R/ShoulderC_R/Arm_R/ArmTwist_R/Elbow_R/HandTwist_R/Wrist_R/Thumb0_R/Thumb1_R
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.z
-    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_R/Shoulder_R/ShoulderC_R/Arm_R/yx__1
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.y
-    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_R/Shoulder_R/ShoulderC_R/Arm_R/yx__1
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.x
-    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_R/Shoulder_R/ShoulderC_R/Arm_R/yx__1
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.z
-    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_R/Shoulder_R/ShoulderC_R/Arm_R/ArmTwist_R/Elbow_R/HandTwist_R/Wrist_R/MiddleFinger1_R/MiddleFinger2_R
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.y
-    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_R/Shoulder_R/ShoulderC_R/Arm_R/ArmTwist_R/Elbow_R/HandTwist_R/Wrist_R/MiddleFinger1_R/MiddleFinger2_R
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.x
-    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_R/Shoulder_R/ShoulderC_R/Arm_R/ArmTwist_R/Elbow_R/HandTwist_R/Wrist_R/MiddleFinger1_R/MiddleFinger2_R
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.z
-    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_L/Shoulder_L/ShoulderC_L/Arm_L/zx_0_1/zx_1_1
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.y
-    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_L/Shoulder_L/ShoulderC_L/Arm_L/zx_0_1/zx_1_1
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.x
-    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_L/Shoulder_L/ShoulderC_L/Arm_L/zx_0_1/zx_1_1
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.z
-    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_R/Shoulder_R/ShoulderC_R/Arm_R/ArmTwist_R/Elbow_R/HandTwist_R/Wrist_R/MiddleFinger1_R
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.y
-    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_R/Shoulder_R/ShoulderC_R/Arm_R/ArmTwist_R/Elbow_R/HandTwist_R/Wrist_R/MiddleFinger1_R
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.x
-    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_R/Shoulder_R/ShoulderC_R/Arm_R/ArmTwist_R/Elbow_R/HandTwist_R/Wrist_R/MiddleFinger1_R
+    path: ArmL_IK_Control
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -9654,7 +9780,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: ArmR_IK_Control
+    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_L/Shoulder_L/ShoulderC_L/Arm_L/zx_0_1/zx_1_1
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -9664,7 +9790,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: ArmR_IK_Control
+    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_L/Shoulder_L/ShoulderC_L/Arm_L/zx_0_1/zx_1_1
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -9674,7 +9800,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: ArmR_IK_Control
+    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_L/Shoulder_L/ShoulderC_L/Arm_L/zx_0_1/zx_1_1
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -9684,7 +9810,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: LegL_IK_Control
+    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -9694,7 +9820,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: LegL_IK_Control
+    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -9704,127 +9830,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: LegL_IK_Control
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.z
-    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/LowerBody
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.y
-    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/LowerBody
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.x
-    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/LowerBody
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.z
-    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_L/Shoulder_L/ShoulderC_L/Arm_L/zx_0_1
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.y
-    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_L/Shoulder_L/ShoulderC_L/Arm_L/zx_0_1
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.x
-    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_L/Shoulder_L/ShoulderC_L/Arm_L/zx_0_1
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.z
-    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_R/Shoulder_R/ShoulderC_R/Arm_R/ArmTwist_R/Elbow_R/HandTwist_R/Wrist_R/RingFinger1_R
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.y
-    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_R/Shoulder_R/ShoulderC_R/Arm_R/ArmTwist_R/Elbow_R/HandTwist_R/Wrist_R/RingFinger1_R
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.x
-    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_R/Shoulder_R/ShoulderC_R/Arm_R/ArmTwist_R/Elbow_R/HandTwist_R/Wrist_R/RingFinger1_R
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.z
-    path: ArmL_IK_Control
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.y
-    path: ArmL_IK_Control
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.x
-    path: ArmL_IK_Control
+    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -9864,7 +9870,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_R/Shoulder_R/ShoulderC_R/Arm_R/ArmTwist_R/Elbow_R/HandTwist_R/Wrist_R/LittleFinger1_R
+    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_R/Shoulder_R/ShoulderC_R/Arm_R/ArmTwist_R/Elbow_R/HandTwist_R/Wrist_R/MiddleFinger1_R/MiddleFinger2_R
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -9874,7 +9880,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_R/Shoulder_R/ShoulderC_R/Arm_R/ArmTwist_R/Elbow_R/HandTwist_R/Wrist_R/LittleFinger1_R
+    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_R/Shoulder_R/ShoulderC_R/Arm_R/ArmTwist_R/Elbow_R/HandTwist_R/Wrist_R/MiddleFinger1_R/MiddleFinger2_R
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -9884,67 +9890,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_R/Shoulder_R/ShoulderC_R/Arm_R/ArmTwist_R/Elbow_R/HandTwist_R/Wrist_R/LittleFinger1_R
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.z
-    path: LegR_IK_Control
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.y
-    path: LegR_IK_Control
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.x
-    path: LegR_IK_Control
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.z
-    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_R/Shoulder_R/ShoulderC_R/Arm_R/ArmTwist_R/Elbow_R/HandTwist_R/Wrist_R/Thumb0_R
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.y
-    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_R/Shoulder_R/ShoulderC_R/Arm_R/ArmTwist_R/Elbow_R/HandTwist_R/Wrist_R/Thumb0_R
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.x
-    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_R/Shoulder_R/ShoulderC_R/Arm_R/ArmTwist_R/Elbow_R/HandTwist_R/Wrist_R/Thumb0_R
+    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_R/Shoulder_R/ShoulderC_R/Arm_R/ArmTwist_R/Elbow_R/HandTwist_R/Wrist_R/MiddleFinger1_R/MiddleFinger2_R
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -9984,7 +9930,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_R/Shoulder_R/ShoulderC_R/Arm_R/yx__1/yx__2
+    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_R/Shoulder_R/ShoulderC_R/Arm_R/ArmTwist_R/Elbow_R/HandTwist_R/Wrist_R/IndexFinger1_R/IndexFinger2_R/IndexFinger3_R
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -9994,7 +9940,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_R/Shoulder_R/ShoulderC_R/Arm_R/yx__1/yx__2
+    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_R/Shoulder_R/ShoulderC_R/Arm_R/ArmTwist_R/Elbow_R/HandTwist_R/Wrist_R/IndexFinger1_R/IndexFinger2_R/IndexFinger3_R
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -10004,7 +9950,277 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_R/Shoulder_R/ShoulderC_R/Arm_R/yx__1/yx__2
+    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_R/Shoulder_R/ShoulderC_R/Arm_R/ArmTwist_R/Elbow_R/HandTwist_R/Wrist_R/IndexFinger1_R/IndexFinger2_R/IndexFinger3_R
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: LegR_IK_Control
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: LegR_IK_Control
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: LegR_IK_Control
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_R/Shoulder_R/ShoulderC_R/Arm_R/ArmTwist_R/Elbow_R/HandTwist_R/Wrist_R/IndexFinger1_R/IndexFinger2_R
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_R/Shoulder_R/ShoulderC_R/Arm_R/ArmTwist_R/Elbow_R/HandTwist_R/Wrist_R/IndexFinger1_R/IndexFinger2_R
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_R/Shoulder_R/ShoulderC_R/Arm_R/ArmTwist_R/Elbow_R/HandTwist_R/Wrist_R/IndexFinger1_R/IndexFinger2_R
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_L/Shoulder_L/ShoulderC_L/Arm_L/zx_0_1
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_L/Shoulder_L/ShoulderC_L/Arm_L/zx_0_1
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_L/Shoulder_L/ShoulderC_L/Arm_L/zx_0_1
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_R/Shoulder_R/ShoulderC_R/Arm_R/yx__1
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_R/Shoulder_R/ShoulderC_R/Arm_R/yx__1
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_R/Shoulder_R/ShoulderC_R/Arm_R/yx__1
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_R/Shoulder_R/ShoulderC_R/Arm_R/ArmTwist_R/Elbow_R/HandTwist_R/Wrist_R/Thumb0_R/Thumb1_R/Thumb2_R
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_R/Shoulder_R/ShoulderC_R/Arm_R/ArmTwist_R/Elbow_R/HandTwist_R/Wrist_R/Thumb0_R/Thumb1_R/Thumb2_R
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_R/Shoulder_R/ShoulderC_R/Arm_R/ArmTwist_R/Elbow_R/HandTwist_R/Wrist_R/Thumb0_R/Thumb1_R/Thumb2_R
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: ArmR_IK_Control
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: ArmR_IK_Control
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: ArmR_IK_Control
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_R/Shoulder_R/ShoulderC_R/Arm_R/yx__1/yx__2/yx__3
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_R/Shoulder_R/ShoulderC_R/Arm_R/yx__1/yx__2/yx__3
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_R/Shoulder_R/ShoulderC_R/Arm_R/yx__1/yx__2/yx__3
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_R/Shoulder_R/ShoulderC_R/Arm_R/ArmTwist_R/Elbow_R/HandTwist_R/Wrist_R/LittleFinger1_R
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_R/Shoulder_R/ShoulderC_R/Arm_R/ArmTwist_R/Elbow_R/HandTwist_R/Wrist_R/LittleFinger1_R
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_R/Shoulder_R/ShoulderC_R/Arm_R/ArmTwist_R/Elbow_R/HandTwist_R/Wrist_R/LittleFinger1_R
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/LowerBody
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/LowerBody
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/LowerBody
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -10044,7 +10260,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_R/Shoulder_R/ShoulderC_R/Arm_R/ArmTwist_R/Elbow_R/HandTwist_R/Wrist_R/Thumb0_R/Thumb1_R/Thumb2_R
+    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_R/Shoulder_R
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -10054,7 +10270,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_R/Shoulder_R/ShoulderC_R/Arm_R/ArmTwist_R/Elbow_R/HandTwist_R/Wrist_R/Thumb0_R/Thumb1_R/Thumb2_R
+    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_R/Shoulder_R
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -10064,27 +10280,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_R/Shoulder_R/ShoulderC_R/Arm_R/ArmTwist_R/Elbow_R/HandTwist_R/Wrist_R/Thumb0_R/Thumb1_R/Thumb2_R
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.x
-    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_R/Shoulder_R/ShoulderC_R/Arm_R/yx__1/yx__2/yx__3
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.y
-    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_R/Shoulder_R/ShoulderC_R/Arm_R/yx__1/yx__2/yx__3
+    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_R/Shoulder_R
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -10094,7 +10290,207 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_R/Shoulder_R/ShoulderC_R/Arm_R/yx__1/yx__2/yx__3
+    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_R/Shoulder_R/ShoulderC_R/Arm_R/yx__1/yx__2
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_R/Shoulder_R/ShoulderC_R/Arm_R/yx__1/yx__2
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_R/Shoulder_R/ShoulderC_R/Arm_R/yx__1/yx__2
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_R/Shoulder_R/ShoulderC_R/Arm_R/ArmTwist_R/Elbow_R/HandTwist_R/Wrist_R/MiddleFinger1_R
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_R/Shoulder_R/ShoulderC_R/Arm_R/ArmTwist_R/Elbow_R/HandTwist_R/Wrist_R/MiddleFinger1_R
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_R/Shoulder_R/ShoulderC_R/Arm_R/ArmTwist_R/Elbow_R/HandTwist_R/Wrist_R/MiddleFinger1_R
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_R/Shoulder_R/ShoulderC_R/Arm_R/ArmTwist_R/Elbow_R/HandTwist_R/Wrist_R/LittleFinger1_R/LittleFinger2_R
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_R/Shoulder_R/ShoulderC_R/Arm_R/ArmTwist_R/Elbow_R/HandTwist_R/Wrist_R/LittleFinger1_R/LittleFinger2_R
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_R/Shoulder_R/ShoulderC_R/Arm_R/ArmTwist_R/Elbow_R/HandTwist_R/Wrist_R/LittleFinger1_R/LittleFinger2_R
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_R/Shoulder_R/ShoulderC_R/Arm_R/ArmTwist_R/Elbow_R/HandTwist_R/Wrist_R/Thumb0_R/Thumb1_R
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_R/Shoulder_R/ShoulderC_R/Arm_R/ArmTwist_R/Elbow_R/HandTwist_R/Wrist_R/Thumb0_R/Thumb1_R
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_R/Shoulder_R/ShoulderC_R/Arm_R/ArmTwist_R/Elbow_R/HandTwist_R/Wrist_R/Thumb0_R/Thumb1_R
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: LegL_IK_Control
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: LegL_IK_Control
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: LegL_IK_Control
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_R/Shoulder_R/ShoulderC_R/Arm_R/ArmTwist_R/Elbow_R/HandTwist_R/Wrist_R/RingFinger1_R
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_R/Shoulder_R/ShoulderC_R/Arm_R/ArmTwist_R/Elbow_R/HandTwist_R/Wrist_R/RingFinger1_R
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_R/Shoulder_R/ShoulderC_R/Arm_R/ArmTwist_R/Elbow_R/HandTwist_R/Wrist_R/RingFinger1_R
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_R/Shoulder_R/ShoulderC_R/Arm_R/ArmTwist_R/Elbow_R/HandTwist_R/Wrist_R/Thumb0_R
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_R/Shoulder_R/ShoulderC_R/Arm_R/ArmTwist_R/Elbow_R/HandTwist_R/Wrist_R/Thumb0_R
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: ningguang.unity_export_as_blender_no_rigid/ningguang_arm/ParentNode/Center/Groove/Waist/UpperBody/UpperBody2/ShoulderP_R/Shoulder_R/ShoulderC_R/Arm_R/ArmTwist_R/Elbow_R/HandTwist_R/Wrist_R/Thumb0_R
     classID: 4
     script: {fileID: 0}
   m_HasGenericRootTransform: 0

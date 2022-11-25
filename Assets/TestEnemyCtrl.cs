@@ -20,13 +20,13 @@ public class TestEnemyCtrl : MonoBehaviour
     {
         var positionDelta = transform.position - prevPosition;
         var positionDeltaMagnitude = positionDelta.magnitude;
-        if (positionDeltaMagnitude > 0.2f) {
+        if (positionDeltaMagnitude > 0.35f) {
             var enemyMobileScriptComp = this.GetComponent<EnemyMobile>();
             enemyMobileScriptComp.enabled = false;
         }
         prevPosition = transform.position;
 
-        if (transform.position.y < -10)
+        if (transform.position.y < -20)
         {
             Health thisHealth = GetComponent<Health>();
             thisHealth.TakeDamage(1000, gameObject);

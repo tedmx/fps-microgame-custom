@@ -18,13 +18,12 @@ public class CollisionDmgReceiver : MonoBehaviour
     }
     void OnCollisionEnter(Collision collision)
     {
-        bool colliderIsABlock = true || collision.rigidbody.GetComponent<Unity.FPS.AI.ABlockController>() != null;
-        if (colliderIsABlock && collision.impulse.magnitude > 5)
+        if (collision.impulse.magnitude > 7)
         {
             // Debug.Log(collision.impulse.magnitude);
             // Debug.Log("oops this hurts B");
             Health thisHealth = GetComponent<Health>();
-            thisHealth.TakeDamage(4000, gameObject);
+            thisHealth.TakeDamage(200, gameObject);
 
         }
     }

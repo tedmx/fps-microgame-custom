@@ -40,8 +40,6 @@ public class InverseKinematics : MonoBehaviour {
 
 			Vector3 cross = Vector3.Cross (elbow.position - upperArm.position, forearm.position - upperArm.position);
 
-
-
 			upperArm_Length = Vector3.Distance (upperArm.position, forearm.position);
 			forearm_Length =  Vector3.Distance (forearm.position, hand.position);
 			arm_Length = upperArm_Length + forearm_Length;

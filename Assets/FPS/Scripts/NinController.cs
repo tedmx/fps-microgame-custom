@@ -68,20 +68,6 @@ public class NinController : MonoBehaviour
     {
         var neckBone = GameObject.Find("Neck");
 
-        var upperBody2Bone = GameObject.Find("UpperBody2");
-
-        // neckBone.transform.rotation = upperBody2Bone.transform.rotation;
-
-        return;
-
-        var isKicking = animator.GetBool("shouldDoDownPunch");
-        if (isKicking)
-        {
-            prevNeckRotation = neckBone.transform.rotation;
-            prevRootRotation = transform.rotation;
-            return;
-        }
-
         var quaternionToPlayer = new Quaternion();
         quaternionToPlayer.SetLookRotation((player.transform.position - neckBone.transform.position).normalized, Vector3.up);
 
@@ -92,21 +78,38 @@ public class NinController : MonoBehaviour
 
         var angleToPlayerYAgnostic = Vector3.Angle(vectorToPlayerYAgnostic, transform.forward);
 
-        var playerIsBehind = angleToPlayerYAgnostic > 100;
+        var playerIsBehind = angleToPlayerYAgnostic > 90;
         var playerIsTooFarAway = vectorToPlayerYAgnostic.magnitude > 17;
 
-        if (playerIsBehind || playerIsTooFarAway)
+        var oldToNewNeckAngle = Quaternion.Angle(neckBone.transform.rotation, prevNeckRotation);
+        var isKicking = animator.GetBool("shouldDoDownPunch");
+
+        var shouldStickToDefaultPoseMore = oldToNewNeckAngle > 45;
+
+        if (/* isKicking || shouldStickToDefaultPoseMore || isDoingFightMove*/ playerIsBehind || playerIsTooFarAway)
         {
-            var isWalking = animator.GetBool("isWalking");
-            if (isWalking)
-            {
-                targetRotation = neckBone.transform.rotation;
-            } else
-            {
-                targetRotation = new Quaternion();
-                targetRotation.SetLookRotation(transform.forward);
-            }
+            neckBone.transform.rotation = Quaternion.Slerp(prevNeckRotation, neckBone.transform.rotation, 0.05f);
+            prevNeckRotation = neckBone.transform.rotation;
+            return;
         }
+
+        /*if (shouldStickToDefaultPoseMore)
+        {
+            prevNeckRotation = Quaternion.Slerp(prevNeckRotation, neckBone.transform.rotation, (oldToNewNeckAngle - 45) / 90);
+        }*/
+
+        /*if (playerIsBehind || playerIsTooFarAway)
+        {
+            // var isWalking = animator.GetBool("isWalking");
+            //if (isWalking)
+            //{
+            targetRotation = neckBone.transform.rotation;
+            //} else
+            //{
+            //    targetRotation = new Quaternion();
+            //    targetRotation.SetLookRotation(transform.forward);
+            //}
+        }*/
 
         neckBone.transform.rotation = Quaternion.Slerp(targetRotation, prevNeckRotation, 0.999f);
         prevNeckRotation = neckBone.transform.rotation;
@@ -254,6 +257,10 @@ public class NinController : MonoBehaviour
         targetPosition = navTargetNavMeshHit.position;
 
         NavMeshPath testPath = new();
+        if (targetPosition == Vector3.positiveInfinity || targetPosition == Vector3.negativeInfinity)
+        {
+            Debug.Log("caught infinity");
+        }
         NavMesh.CalculatePath(transform.position, targetPosition, 1, testPath);
 
         var distanceToTarget = (targetPosition - transform.position).magnitude;
@@ -298,6 +305,11 @@ public class NinController : MonoBehaviour
 
     public void handleColliderEvent(string eventType, string colliderMeshName, Collider  colArg)
     {
+        if (doingSharpTurn)
+        {
+            return;
+        }
+
         var secondsSinceLastPunch = (DateTime.Now.Ticks - lastHitTime) / TimeSpan.TicksPerSecond;
         var readyToPunchGeneral = !doingSharpTurn;
         var readyToPunchBlock = readyToPunchGeneral && secondsSinceLastPunch > 8;
@@ -369,25 +381,25 @@ public class NinController : MonoBehaviour
 
     void HandleRapidLeftLegMoveStart()
     {
-        Debug.Log("LeftAnkle: MovePosition enabled");
+        // Debug.Log("LeftAnkle: MovePosition enabled");
         teleportLeftAnkleRigidbody = false;
     }
 
     void HandleRapidLeftLegMoveEnd()
     {
-        Debug.Log("LeftAnkle: MovePosition disabled");
+        // Debug.Log("LeftAnkle: MovePosition disabled");
         teleportLeftAnkleRigidbody = true;
     }
 
     void HandleRapidRightArmMoveStart()
     {
-        Debug.Log("RightArm: MovePosition enabled");
+        // Debug.Log("RightArm: MovePosition enabled");
         teleportRightWristRigidbody = false;
     }
 
     void HandleRapidRightArmMoveEnd()
     {
-        Debug.Log("RightArm: MovePosition disabled");
+        // Debug.Log("RightArm: MovePosition disabled");
         teleportRightWristRigidbody = true;
     }
 
